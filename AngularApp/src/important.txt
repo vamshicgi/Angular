@@ -1,0 +1,11 @@
+npm install primeng --save
+npm install primeicons --save
+
+npm install @ng-bootstrap/ng-bootstrap
+npm install bootstrap
+npm install localize
+npm install tslib
+
+yarn install
+ng set --global packageManager=yarn
+ng set --global packageManager=npm
