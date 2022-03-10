@@ -8,7 +8,8 @@ import { TeamComponent } from './pages/admin/team/team.component';
 import { RouterModule, Routes } from '@angular/router';
 import { AdminComponent } from './pages/admin/admin.component';
 import { LocationComponent } from './pages/admin/location/location.component';
-
+import { HttpClientModule } from '@angular/common/http';
+import { CommonModule } from '@angular/common';
 
 const routes: Routes = [
   {
@@ -28,11 +29,14 @@ const routes: Routes = [
     AdminComponent,
     DashboardComponent,
     EmployeeComponent,
-    TeamComponent
+    TeamComponent,
+    LocationComponent
   ],
   imports: [
     BrowserModule,
-    RouterModule.forRoot(routes)
+    CommonModule ,
+    RouterModule.forRoot(routes),
+    HttpClientModule
   ],
   providers: [],
   bootstrap: [AppComponent]
