@@ -1,5 +1,16 @@
-<div>
-  <button type="button"><a [routerLink]="['admin']" class="btn btn-danger">Admin</a></button><br>
+<div class="row">
+  <div class="col-md-12">
+    <app-topbar></app-topbar>
+  </div>
+
+<div class="col-md-3">
+<app-sidebar></app-sidebar>
+</div>
+<div class="col-md-9">
+  <router-outlet></router-outlet>
 </div>
 
-<router-outlet></router-outlet>
+<div class="col-md-12">
+  <app-footer></app-footer>
+</div>
+</div>

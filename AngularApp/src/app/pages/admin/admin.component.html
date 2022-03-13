@@ -1,11 +1,31 @@
 <p>admin works!</p>
 
- <div>
-    <button type="button"><a [routerLink]="['employee']" class="btn btn-danger">Employee</a></button><br>
+ <!-- <div>
+  <button type="button"><a [routerLink]="['employee']" class="btn btn-danger">Employee</a></button><br>
     <button type="button"><a [routerLink]="['team']" class="btn btn-danger">Team</a></button><br>
     <button type="button"><a [routerLink]="['location']" class="btn btn-danger">Location</a></button> <br>
-  </div>
+  </div> -->
   
-  <div>
-    <router-outlet></router-outlet>
+ 
+
+
+<div class="card">
+  <h5>Tooltips</h5>
+  <p-tabView (onChange)="btnClick($event)">
+    <p-tabPanel header="Employee" leftIcon="pi pi-calendar" tooltip="Employee Management">
+      <button type="button"><a [routerLink]="['employee']" class="btn btn-danger">Employee</a></button><br>
+    </p-tabPanel>
+
+    <p-tabPanel header="Team" leftIcon="pi pi-calendar" tooltip="Team Management">
+      <button type="button"><a [routerLink]="['team']" class="btn btn-danger">Team</a></button><br>
+    </p-tabPanel>
+
+    <p-tabPanel header="Location" leftIcon="pi pi-calendar" tooltip="Location Management">
+      <button type="button"><a [routerLink]="['location']" class="btn btn-danger">Location</a></button><br>
+    </p-tabPanel>
+  </p-tabView>
+</div>
+
+<div>
+  <router-outlet></router-outlet>
 </div>

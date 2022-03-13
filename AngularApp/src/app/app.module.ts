@@ -10,18 +10,12 @@ import { AdminComponent } from './pages/admin/admin.component';
 import { LocationComponent } from './pages/admin/location/location.component';
 import { HttpClientModule } from '@angular/common/http';
 import { CommonModule } from '@angular/common';
-
-const routes: Routes = [
-  {
-   path:'admin',
-   component:AdminComponent,
-   children: [
-    { path:'location',component:LocationComponent },
-    { path:'team',component:TeamComponent },
-    { path:'employee',component:EmployeeComponent }
-    ]
-}
-];
+import { SidebarComponent } from './layout/sidebar/sidebar.component';
+import { TopbarComponent } from './layout/topbar/topbar.component';
+import { FooterComponent } from './layout/footer/footer.component';
+import { AppRoutingModule } from './app-routing.module';
+import { ErrorComponent } from './error/error/error.component';
+import {TabViewModule} from 'primeng/tabview';
 
 @NgModule({
   declarations: [
@@ -30,13 +24,18 @@ const routes: Routes = [
     DashboardComponent,
     EmployeeComponent,
     TeamComponent,
-    LocationComponent
+    LocationComponent,
+    SidebarComponent,
+    TopbarComponent,
+    FooterComponent,
+    ErrorComponent
   ],
   imports: [
     BrowserModule,
     CommonModule ,
-    RouterModule.forRoot(routes),
-    HttpClientModule
+    AppRoutingModule,
+    HttpClientModule,
+    TabViewModule
   ],
   providers: [],
   bootstrap: [AppComponent]
