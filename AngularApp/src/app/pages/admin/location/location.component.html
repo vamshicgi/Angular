@@ -1,13 +1,14 @@
 <hr>
-<p-table [value]="location" responsiveLayout="scroll">
+<p-table [value]="location" styleClass="p-datatable-gridlines" [paginator]="true" [loading]="loading" [rows]="4" responsiveLayout="scroll" 
+[globalFilterFields]="['locationId','streetAddress','postalCode','city','stateProvince','countryId']">
     <ng-template pTemplate="header">
         <tr>
-            <th>Location ID</th>
-            <th>Street Address</th>
-            <th>Postal Code</th>
-            <th>City</th>
-            <th>State Province</th>
-            <th>Country Id</th>
+            <th pSortableColumn="locationId">Location ID <p-sortIcon field="locationId"></p-sortIcon></th> 
+            <th pSortableColumn="streetAddress">Street Address <p-sortIcon field="streetAddress"></p-sortIcon></th>
+            <th pSortableColumn="postalCode">Postal Code <p-sortIcon field="postalCode"></p-sortIcon></th>
+            <th pSortableColumn="city">City <p-sortIcon field="city"></p-sortIcon></th>
+            <th pSortableColumn="stateProvince">State Province <p-sortIcon field="stateProvince"></p-sortIcon></th>
+            <th pSortableColumn="countryId">Country Id <p-sortIcon field="countryId"></p-sortIcon></th>
         </tr>
     </ng-template>
     <ng-template pTemplate="body" let-location>
