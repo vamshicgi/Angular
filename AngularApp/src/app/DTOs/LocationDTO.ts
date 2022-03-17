@@ -1,8 +1,8 @@
 export class LocationDTO{
-    LocationID:number=0;
-    StreetAddress:string="";
-    PostalCode:string="";
-    City:string="";
-    StateProvince:string="";
-    CountryCode:string=""
+    locationId:string="";
+    streetAddress:string="";
+    postalCode:string="";
+    city:string="";
+    stateProvince:string="";
+    countryId:string=""
 }

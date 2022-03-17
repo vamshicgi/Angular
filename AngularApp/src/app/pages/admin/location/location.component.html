@@ -1,9 +1,23 @@
-<p>location works!</p>
-
 <hr>
-<ul>
-    <li *ngFor="let data of location">
-      {{data.locationId}}  {{data.city}}
-     </li>
-    
-  </ul>
+<p-table [value]="location" responsiveLayout="scroll">
+    <ng-template pTemplate="header">
+        <tr>
+            <th>Location ID</th>
+            <th>Street Address</th>
+            <th>Postal Code</th>
+            <th>City</th>
+            <th>State Province</th>
+            <th>Country Id</th>
+        </tr>
+    </ng-template>
+    <ng-template pTemplate="body" let-location>
+        <tr>
+            <td>{{location.locationId}}</td>
+            <td>{{location.streetAddress}}</td>
+            <td>{{location.postalCode}}</td>
+            <td>{{location.city}}</td>
+            <td>{{location.stateProvince}}</td>
+            <td>{{location.countryId}}</td>
+        </tr>
+    </ng-template>
+</p-table>

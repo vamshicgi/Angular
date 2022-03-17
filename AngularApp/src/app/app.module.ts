@@ -16,6 +16,10 @@ import { FooterComponent } from './layout/footer/footer.component';
 import { AppRoutingModule } from './app-routing.module';
 import { ErrorComponent } from './error/error/error.component';
 import {TabViewModule} from 'primeng/tabview';
+import { LocationService } from './shared/location.service';
+
+import {TableModule} from 'primeng/table';
+import { FormsModule } from '@angular/forms';
 
 @NgModule({
   declarations: [
@@ -28,16 +32,19 @@ import {TabViewModule} from 'primeng/tabview';
     SidebarComponent,
     TopbarComponent,
     FooterComponent,
-    ErrorComponent
+    ErrorComponent,
+
   ],
   imports: [
     BrowserModule,
     CommonModule ,
     AppRoutingModule,
     HttpClientModule,
-    TabViewModule
+    TabViewModule,
+    FormsModule,
+    TableModule
   ],
-  providers: [],
+  providers: [LocationService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
