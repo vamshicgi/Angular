@@ -1,7 +1,16 @@
 <hr>
 <p-table [value]="location" styleClass="p-datatable-gridlines" [paginator]="true" [loading]="loading" [rows]="4" responsiveLayout="scroll" 
 [globalFilterFields]="['locationId','streetAddress','postalCode','city','stateProvince','countryId']">
-    <ng-template pTemplate="header">
+    
+<ng-template pTemplate="caption">
+    <div class="flex">
+        <!-- <button type="button" pButton pRipple icon="pi pi-file" (click)="dt.exportCSV()" class="mr-2" pTooltip="CSV" tooltipPosition="bottom"></button>
+        <button type="button" pButton pRipple icon="pi pi-file-excel" (click)="exportExcel()" class="p-button-success mr-2"  pTooltip="XLS" tooltipPosition="bottom"></button>
+        <button type="button" pButton pRipple icon="pi pi-file-pdf" (click)="exportPdf()" class="p-button-warning mr-2" pTooltip="PDF" tooltipPosition="bottom"></button>
+        <button type="button" pButton pRipple icon="pi pi-filter" (click)="dt.exportCSV({selectionOnly:true})" class="p-button-info ml-auto" pTooltip="Selection Only" tooltipPosition="bottom"></button> -->
+    </div>
+</ng-template>
+<ng-template pTemplate="header">
         <tr>
             <th pSortableColumn="locationId">Location ID <p-sortIcon field="locationId"></p-sortIcon></th> 
             <th pSortableColumn="streetAddress">Street Address <p-sortIcon field="streetAddress"></p-sortIcon></th>

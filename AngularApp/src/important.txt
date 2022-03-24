@@ -9,3 +9,5 @@ npm install tslib
 yarn install
 ng set --global packageManager=yarn
 ng set --global packageManager=npm
+
+npm install '@types/file-saver'

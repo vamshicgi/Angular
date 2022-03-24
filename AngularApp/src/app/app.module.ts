@@ -21,6 +21,11 @@ import { LocationService } from './shared/location.service';
 import {TableModule} from 'primeng/table';
 import { FormsModule } from '@angular/forms';
 
+import {TreeModule} from 'primeng/tree';
+import { AdminService } from './shared/admin.service';
+
+
+
 @NgModule({
   declarations: [
     AppComponent,
@@ -42,9 +47,10 @@ import { FormsModule } from '@angular/forms';
     HttpClientModule,
     TabViewModule,
     FormsModule,
-    TableModule
+    TableModule,
+    TreeModule
   ],
-  providers: [LocationService],
+  providers: [LocationService,AdminService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
